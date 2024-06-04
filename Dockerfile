@@ -30,3 +30,7 @@ WORKDIR /opt/VoyantServer
 CMD [ "java", "-Djava.awt.headless=true", "-Dfile.encoding=UTF-8", "-jar", "VoyantServer.jar", "headless=true" ]
 
 EXPOSE 8888
+
+# For Colab
+COPY ./docker-build/console.sh /console.sh
+COPY ./docker-build/startup.sh /startup.sh
