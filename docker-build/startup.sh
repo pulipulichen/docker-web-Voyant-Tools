@@ -21,6 +21,7 @@ waitForConntaction() {
 
 rm -f "${LOCAL_VOLUMN_PATH}/.docker-web.ready" || true
 rm -f "${LOCAL_VOLUMN_PATH}/.cloudflare.url" || true
+mkdir -p "${LOCAL_VOLUMN_PATH}"
 ls -la "${LOCAL_VOLUMN_PATH}/"
 
 INITED="true"
