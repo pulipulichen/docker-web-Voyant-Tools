@@ -9,3 +9,6 @@ title: "docker-web-Voyant-Tools"
 license: "MIT"
 repository-code: "https://github.com/pulipulichen/docker-web-Voyant-Tools"
 abstract: "A web server based on Docker technology to host Voyant Server for text analysis and visualization."
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.11477626
