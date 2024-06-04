@@ -1,0 +1,33 @@
+{
+  "name": "docker-web-Voyant-Tools",
+  "version": "1.0.1",
+  "description": "A web server based on Docker technology to host Voyant Server for text analysis and visualization.",
+  "main": "index.js",
+  "scripts": {
+    "start": "docker-compose up --build",
+    "reset-start": "rm -rf ./docker-web-Voyant-Tools; docker-compose up --build",
+    "d0.build": "docker-compose build",
+    "d1.bash": "docker-compose run --service-ports app bash /console.sh",
+    "save-conf": "bash ./docker-build/save-conf.sh",
+    "commit-docker-image": "docker-compose build; bash ./docker-build/image/commit-docker-image.sh",
+    "tag": "./build/tag.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://pulipuli.chen@gmail.com@github.com/pulipulichen/docker-web-Voyant-Tools.git"
+  },
+  "keywords": [
+    "PWA"
+  ],
+  "author": {
+    "name": "Yung-Ting Chen",
+    "email": "blog@pulipuli.info",
+    "orcid": "https://orcid.org/0000-0003-3751-610X",
+    "url": "https://blog.pulipuli.info"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pulipulichen/docker-web-Voyant-Tools/issues"
+  },
+  "homepage": "https://github.com/pulipulichen/docker-web-Voyant-Tools#readme"
+}

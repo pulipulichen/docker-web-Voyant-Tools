@@ -1,0 +1,10 @@
+version: "3"
+services:
+  app:
+    build: .
+    tty: true
+    #user: solr
+    ports:
+      - "28080:8888"
+    # volumes: 
+    #   - "./data:/VoyantServer/data"
