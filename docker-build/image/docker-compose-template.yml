@@ -1,7 +1,7 @@
 version: "3"
 services:
   app:
-    image: pudding/docker-web:docker-web-voyant-tools-app-20240604.225935
+    image: pudding/docker-web:docker-web-voyant-tools-app-20240604.232610
     tty: true
     ports:
       - "8888:8888"

@@ -6,7 +6,7 @@ waitForConntaction() {
   port="$1"
   sleep 3
   while true; do
-    echo "http://127.0.0.1:$port"
+    echo "Wait for http://127.0.0.1:$port ready..."
     if curl -sSf "http://127.0.0.1:$port" >/dev/null 2>&1; then
       echo "Connection successful."
       break
@@ -31,6 +31,7 @@ INITED="true"
 
 #docker-entrypoint.sh solr-foreground -force -Dsolr.clustering.enabled=true &
 # solr start -force -f -Dsolr.clustering.enabled=true &
+$STARTUP_COMMAND &
 
 #echo "BEFORE ================================================================="
 waitForConntaction "${LOCAL_PORT}"
@@ -78,7 +79,7 @@ getCloudflarePublicURL() {
   # Extracting the URL using grep and awk
   url=$(grep -o 'https://[^ ]*\.trycloudflare\.com' "$file_path" | awk '/https:\/\/[^ ]*\.trycloudflare\.com/{print; exit}')
 
-  echo "$url/solr/collection/browse"
+  echo "${url}${SERVER_DEFAULT_URI}"
 }
 
 getCloudflarePublicURL "${LOCAL_PORT}" > "${LOCAL_VOLUMN_PATH}/.cloudflare.url"
@@ -86,7 +87,7 @@ getCloudflarePublicURL "${LOCAL_PORT}" > "${LOCAL_VOLUMN_PATH}/.cloudflare.url"
 # ----------------------------------------------------------------
 
 
-url="http://127.0.0.1:${LOCAL_PORT}/solr/collection/browse"
+url="http://127.0.0.1:${LOCAL_PORT}${SERVER_DEFAULT_URI}"
 
 while true; do
     response=$(curl -s "$url")
@@ -109,6 +110,7 @@ echo `date` > "${LOCAL_VOLUMN_PATH}/.docker-web.ready"
 
 echo "================================================================"
 echo "Voyant Tools are ready to serve."
+cat "${LOCAL_VOLUMN_PATH}/.cloudflare.url"
 echo "================================================================"
 
 # ----------------------------------------------------------------

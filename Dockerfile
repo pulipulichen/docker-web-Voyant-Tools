@@ -27,12 +27,15 @@ RUN    unzip /tmp/VoyantServer.zip -d /tmp && \
 
 WORKDIR /opt/VoyantServer
 
-CMD [ "java", "-Djava.awt.headless=true", "-Dfile.encoding=UTF-8", "-jar", "VoyantServer.jar", "headless=true" ]
-
 EXPOSE 8888
 
-# For Colab
+# For docker-web & Colab default
 COPY ./docker-build/console.sh /console.sh
 COPY ./docker-build/startup.sh /startup.sh
+CMD ["bash", "/startup.sh"]
+
+# For docker-web & Colab customize
 ENV LOCAL_PORT=8888
-ENV LOCAL_VOLUMN_PATH=/opt
+ENV STARTUP_COMMAND="java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -jar VoyantServer.jar headless=true"
+ENV LOCAL_VOLUMN_PATH=/data
+ENV SERVER_DEFAULT_URI=/

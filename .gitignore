@@ -3,6 +3,5 @@
 # /output/*.html
 # /cache
 
-/solr-data
-/docker-web-Apache-Solr
+/docker-web-*
 /data

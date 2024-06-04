@@ -6,5 +6,6 @@ services:
     #user: solr
     ports:
       - "28080:8888"
-    # volumes: 
-    #   - "./data:/VoyantServer/data"
+    volumes: 
+      - "./data:/data"
+      - "./docker-web-Voyant-Tools:/opt/VoyantServer"
