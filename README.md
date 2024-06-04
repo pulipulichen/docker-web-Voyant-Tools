@@ -6,7 +6,7 @@ A web server based on Docker technology to host Voyant Server for text analysis 
 
 基於 Docker 技術的網頁伺服器，用於架設 Voyant Server ，可進行文本分析和可視化。
 
-@TODO Preview Image
+![](https://blogger.googleusercontent.com/img/a/AVvXsEhxppe6PdJiWvlRnGvHOdu6XW9RKBjVjPIcAMxV3AhUpP9olypoan-ASgXs9NnDmBAtgS4HJmi7M2zf38rIb890jHWNuqIm0u9_XiQQpSl7llucgH2zdZOlyjuCafEOLGzjU15md9y_mt5dAym5deCn0YFpnGSUosC48jS5saEWemRZcx2QLZMtnw)
 
 # Key Techniques
 
@@ -28,3 +28,13 @@ https://colab.research.google.com/drive/1TwVZwbCvYOgx4bID-hRuVCvFnqcl4l0b?usp=sh
 
 - https://github.com/voyanttools/Voyant/tree/master
 - https://github.com/bowdoincollege/voyant-docker/tree/master
+
+----
+
+# 文本
+
+紅樓夢之劉姥姥進大觀園 https://rb.gy/nscn7j 
+
+# 教案
+
+https://rb.gy/8khv73 
