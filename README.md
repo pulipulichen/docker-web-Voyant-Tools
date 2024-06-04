@@ -22,7 +22,7 @@ https://colab.research.google.com/drive/1TwVZwbCvYOgx4bID-hRuVCvFnqcl4l0b?usp=sh
 
 # Citation
 
-@TODO Citation
+Chen, Y.-T. (2024). *Docker-web-Voyant-Tools* (20240605.012952) [Computer software]. Zenodo. [https://doi.org/10.5281/ZENODO.11477626](https://doi.org/10.5281/ZENODO.11477626)
 
 # References
 
