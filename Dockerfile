@@ -36,6 +36,8 @@ CMD ["bash", "/startup.sh"]
 
 # For docker-web & Colab customize
 ENV LOCAL_PORT=8888
+
+# For docker-web & Colab in docker-compose-template.yml
 ENV STARTUP_COMMAND="java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -jar VoyantServer.jar headless=true"
 ENV LOCAL_VOLUMN_PATH=/data
 ENV SERVER_DEFAULT_URI=/

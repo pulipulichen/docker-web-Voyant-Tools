@@ -7,3 +7,6 @@ services:
       - "8888:8888"
     environment:
       - CONTAINER_NAME=docker-web-voyant-tools-app
+      - LOCAL_VOLUMN_PATH=/data
+      - STARTUP_COMMAND="java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -jar VoyantServer.jar headless=true"
+      - SERVER_DEFAULT_URI=/
