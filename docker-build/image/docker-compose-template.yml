@@ -4,6 +4,6 @@ services:
     image: pudding/docker-web:docker-web-voyant-tools-app-20240604.221544
     tty: true
     ports:
-      - "8983:8888"
+      - "8888:8888"
     environment:
       - CONTAINER_NAME=docker-web-voyant-tools-app
