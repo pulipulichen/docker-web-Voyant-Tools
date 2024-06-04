@@ -34,3 +34,5 @@ EXPOSE 8888
 # For Colab
 COPY ./docker-build/console.sh /console.sh
 COPY ./docker-build/startup.sh /startup.sh
+ENV LOCAL_PORT=8888
+ENV LOCAL_VOLUMN_PATH=/opt
