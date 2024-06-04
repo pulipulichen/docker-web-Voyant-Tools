@@ -1,4 +1,4 @@
-@TODO DOI
+[![DOI](https://zenodo.org/badge/810012474.svg)](https://zenodo.org/doi/10.5281/zenodo.11477626)
 
 # docker-web-Voyant-Tools: 架設Voyant Server來實作文本探勘 
 

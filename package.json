@@ -29,5 +29,6 @@
   "bugs": {
     "url": "https://github.com/pulipulichen/docker-web-Voyant-Tools/issues"
   },
-  "homepage": "https://github.com/pulipulichen/docker-web-Voyant-Tools#readme"
+  "homepage": "https://github.com/pulipulichen/docker-web-Voyant-Tools#readme",
+  "dot": "10.5281/zenodo.11477626"
 }
